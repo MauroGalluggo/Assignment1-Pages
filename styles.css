@@ -1,0 +1,365 @@
+/* CSS file */
+
+/*Local hosted fonts*/
+@font-face {
+  font-family: 'open_sansregular';
+    src: url('assets/OpenSans-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'collegeregular';
+    src: url('assets/COLLEGE-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Add gradient color to main heading of page
+  used this website for inspiration and help with code
+  https://cssgradient.io/gradient-backgrounds/*/
+h1,
+h2 {
+  margin: 0;
+  font-family: 'collegeregular', sans-serif;
+  background: linear-gradient(115deg, #08AEEA 0%, #2AF598 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2.3em;
+  margin-top: 8px;
+}
+
+h3 {
+  font-family: 'collegeregular', sans-serif;
+  font-size: 2em;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #e0e0e3;
+  font-weight: 300;
+  margin-top: 4px;
+  line-height: 24px;
+}
+
+/* ID Selector */
+#css-zen-garden {
+  margin: 0;
+  padding: 0;
+  font-family: 'open_sansregular', sans-serif;
+  font-size: 14px;
+  color: #e0e0e3;
+  background-color: #161619;
+  font-weight: 300;
+}
+
+
+/* Class selector */
+.page-wrapper {
+  width: 80%;
+  margin: 40px auto;
+  position: relative;
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+
+/* Type Selector */
+header {
+  margin-bottom: 40px;
+  
+}
+
+.summary p:nth-child(2) {
+  margin-top: 20px;
+}
+
+.summary a {
+  padding: 8px 16px;
+  margin: 8px 0;
+  border-radius: 12px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(115deg, #08AEEA 0%, #2AF598 100%);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summary a:hover {
+  background: linear-gradient(115deg, #2AF598 0%, #08AEEA 100%);
+  color: #333;
+}
+
+
+.summary a {
+  margin-inline: 12px;
+}
+
+.preamble {
+  margin-top: 40px;
+}
+
+
+#zen-supporting div {
+  background: #e0e0e3;
+  color: #333;
+  padding: 40px;
+  border-radius: 32px;
+  width: 70%;
+}
+
+#zen-supporting div:not(:first-child) {
+ margin-top: 40px;
+}
+
+#zen-supporting p {
+  color: #333;
+  margin-top: 12px;
+}
+
+
+footer {
+  margin-top: 40px;
+}
+
+/* Attribute Selector */
+a[href^="http"] {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+  color: #0055cc;
+}
+
+/* Descendant Combinator */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Child Combinator */
+section>h2 {
+  font-size: 24px;
+}
+
+/* Direct Sibling Combinator */
+article+article {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+/* General Sibling Combinator */
+article~article {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+/* Pseudo-element Selector */
+h1::before {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/*This was my attempt at a creative element */
+
+/* I hid the actual anchor tag text from the footer links by using the same colour as the background and I used absolute
+  position on the anchor tags pseudo elementes (before) to include fontawesome icons instead. 
+  To learn how to do it I googled "css how to add icons on pseudo element" and found this thread:
+  https://stackoverflow.com/questions/69723266/using-icon-in-css-files-by-pseudo-element */
+
+.zen-validate-css,
+.zen-license,
+.zen-accessibility,
+.zen-github,
+.zen-validate-html {
+  width: 76px;
+  height: 76px;
+  padding: 76px 0 0 0;
+  margin: 0 3em;
+  display: inline-block;
+  padding: 40px 0 0 0;
+  margin: 0 0.5em;
+  position: relative;
+  color: #161619 !important;
+}
+
+.zen-validate-css:before,
+.zen-license:before,
+.zen-accessibility:before,
+.zen-github:before,
+.zen-validate-html:before {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  overflow: visible;
+  font-size: 72px;
+  text-indent: 0;
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(115deg, #08AEEA 0%, #2AF598 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* For the icons' styling I was struggling a bit and I took inspiration from one of the http://www.csszengarden.com/ examples
+  and this is where I foud the icons code to use: https://fontawesome.com/v4/cheatsheet/ */
+
+.zen-validate-html:before {
+  font-family: FontAwesome;
+  content: "\f13b";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.zen-validate-css:before {
+  font-family: FontAwesome;
+  content: "\f13c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.zen-license:before {
+  font-family: FontAwesome;
+  content: "\f25e";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.zen-accessibility:before {
+  font-family: FontAwesome;
+  content: "\f29b";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+.zen-github:before {
+  font-family: FontAwesome;
+  content: "\f09b";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+/* Aside */
+
+/* role selector */
+[role=navigation] a, .zen-resources ul li a {
+  text-decoration: none;
+  color: #bebedf;
+}
+
+[role=navigation] a:hover, .zen-resources ul li a:hover {
+  color: #e0e0e3;
+}
+
+/* Style the navigation links */
+.zen-resources ul li {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.sidebar {
+  position: absolute;
+  top: 428px;
+  right: 0;
+  width: 18%;
+   
+}   
+
+.select {
+  display: none;
+}
+
+.design-selection li {
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.design-name  {
+  display: block;
+  padding-block: 5px;
+  background: linear-gradient(115deg, #08AEEA 0%, #2AF598 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.design-name:hover {
+  color: #e0e0e3;
+}
+
+
+/* I ran into a few inheritance issues and therefore used the !important, I tried to keep it to a minimium as you told us in class that it
+  is not best practise to use it */
+.designer-name {
+  display: inline;
+  font-style: italic;
+  color: #bebedf !important;
+}
+
+.designer-name:hover {
+  color: #e0e0e3 !important;
+}
+
+.design-archives, .zen-resources {
+  margin-top: 80px;
+}
+
+.design-archives ul {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+}
+
+.design-archives span {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+
+/* Add margin to the archives and resources sections */
+.design-selection,
+.design-archives,
+.zen-resources {
+  margin-bottom: 20px;
+}
+
+  
